@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio No.13</title>
+
+    <link rel="stylesheet" href="/Ejercicios/Ejercicio 13 Interfaz Voz/Estilos/estiloPrincipal.css">
+    <link rel="shortcut icon" href="/Img/icons8_google_code_32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/Estilos/bootstrap.min.css">
+    <script src="/Scripts JS/bootstrap.bundle.min.js"></script>
+
+    <!--FUENTE-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="nav-bar">
+        <div class="imgs-regresar">
+            <a href="/Ejercicios/Ejercicio 12 Juego Random/index.html"><img src="/Img/returnPage.png" alt=""></a>
+            <a href="/index.html"><img src="/Img/home_96px.png" alt=""></a>            
+        </div>
+        
+        <div class="img-info">
+            <button type="button" id="id-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+        </div>
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Información del Ejercicio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <P>Reconocimiento de Voz</P>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="titulo">
+            <h1>Reconocimiento de Voz</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion">
+            <h2>Titulo seccion</h2>
+
+            <form action="">
+                <div class="form-group">
+                    <textarea name="" id="textbox" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <button id="start-btn" class="btn btn-danger btn-block">
+                        Escuchar
+                    </button>
+                </div>
+
+            </form>
+                      
+        </section>
+
+        <section class="seccion">
+            <h2>Titulo seccion</h2>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h4>©Andrés Gavino Todos los derechos reservados</h4>
+        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-5.92,44.89 C311.23,208.70 365.40,18.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(255, 255, 255, 0.74)"></path></svg></div>
+    </footer>
+    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/Ejercicios/Ejercicio 13 Interfaz Voz/Scripts JS/script.js"></script>
+
+</html>

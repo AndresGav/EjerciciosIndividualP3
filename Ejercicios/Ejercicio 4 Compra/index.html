@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio No. 4</title>
+
+    <link rel="stylesheet" href="/Ejercicios/Ejercicio 4 Compra/Estilos/estiloPrincipal.css">
+    <link rel="shortcut icon" href="/Img/icons8_google_code_32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/Estilos/bootstrap.min.css">
+    <script src="/Scripts JS/bootstrap.bundle.min.js"></script>
+
+    <!--FUENTE-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+    </style>
+
+    <script src="/Ejercicios/Ejercicio 4 Compra/Script JS/script.js"></script>
+
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="imgs-regresar">
+            <a href="/Ejercicios/Ejercicio 3 Formar Numero/index.html"><img src="/Img/returnPage.png" alt=""></a>
+            <a href="/index.html"><img src="/Img/home_96px.png" alt=""></a>
+            <a href="/Ejercicios/Ejercicio 5 Hora Next Second/index.html"><img src="/Img/nextPage.png" alt=""></a>
+            
+        </div>
+        
+        <div class="img-info">
+            <button type="button" id="id-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+        </div>
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Información del Ejercicio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <P style="text-align: justify;">
+                        Un supermercado ha puesto en oferta la venta al por mayor de cierto producto,
+                        ofreciendo un descuento del 15% por la compra de más de 3 docenas y 10% en caso
+                        contrario. Además por la compra de más de 3 docenas se obsequia una unidad del
+                        producto por cada docena en exceso sobre 3.
+                        Determine el monto de la compra, el monto del descuento, el monto a pagar y el
+                        número de unidades de obsequio por la compra de cierta cantidad de docenas del
+                        producto.
+                    </P>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="titulo">
+            <h1>Compra al por mayor</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion">
+            <h2>Producto</h2>
+
+
+            <div class="producto-img">
+                <div >
+                    <img src="/Ejercicios/Ejercicio 4 Compra/Img/productoImg.png" alt="">
+                </div>
+                
+                <div class="producto-detalle">
+                    <p> <strong>Coca Cola</strong>, bebida gaseosa y refrescante</p>
+                    <p> <strong>Precio c/u: </strong>$0.60</p>
+                </div>
+                
+            </div>
+
+            <div class="producto-add-reduce">
+                
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="id_cantidad" placeholder="10" required>
+                    <label for="floatingInput">Cantidad</label>
+                </div>
+                
+            </div>
+
+            <div class="frm-btn-calcular">
+                <button type="button" class="btn btn-primary btn-sm" onclick="getData()">Calcular</button>
+            </div>
+
+        </section>
+
+        <section class="seccion">
+            <h2>Detalles</h2>
+
+            <div class="detalles-prd">
+
+                <div class="detalles-prd-item">
+                    <h4>Cantidad</h4>
+                    <h5 id="id_cantidadPrd">0</h5>
+                </div>
+
+                <div class="detalles-prd-item">
+                    <h4>No. Docenas</h4>
+                    <h5 id="id_docenas">0</h5>
+                </div>
+
+                <div class="detalles-prd-item">
+                    <h4>Porcentaje Descuento</h4>
+                    <h5 id="id_porcentajeDes">%0</h5>
+                </div>
+
+                <div class="detalles-prd-item">
+                    <h4>Unidades Obsequidas</h4>
+                    <h5 id="id_unidadesObsequidas">0</h5>
+                </div>
+
+                <div class="detalles-prd-item">
+                    <h4>Total Unidades</h4>
+                    <h5 id="id_totalUnidades">0</h5>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion">
+            <h2>Cantidad a pagar</h2>
+            
+            <div class="detalles-prd">
+                <div class="detalles-prd-item">
+                    <h4>Subtotal</h4>
+                    <h5 id="id_subTotal">$0</h5>
+                </div>
+
+                <div class="detalles-prd-item">
+                    <h4>Descuento</h4>
+                    <h5 id="id_descuento">$0</h5>
+                </div>
+
+                <div class="detalles-prd-item">
+                    <h4>Total</h4>
+                    <h5 id="id_total">$0</h5>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h4>©Andrés Gavino Todos los derechos reservados</h4>
+        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-5.92,44.89 C311.23,208.70 365.40,18.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(255, 255, 255, 0.74)"></path></svg></div>
+    </footer>
+    
+</body>
+</html>

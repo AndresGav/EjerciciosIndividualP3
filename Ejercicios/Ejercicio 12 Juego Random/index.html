@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio No. 12</title>
+
+    <link rel="stylesheet" href="/Ejercicios/Ejercicio 12 Juego Random/Estilos/estiloPrincipal.css">
+    <link rel="shortcut icon" href="/Img/icons8_google_code_32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/Estilos/bootstrap.min.css">
+    <script src="/Ejercicios/Ejercicio 12 Juego Random/Script JS/bootstrap.bundle.min.js"></script>
+
+    <!--FUENTE-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+    </style>
+
+
+</head>
+
+
+<body onload="cambiar()">
+
+    <div class="nav-bar">
+        <div class="imgs-regresar">
+            <a href="/Ejercicios/Ejercicio 11 Combinacion Numeros/index.html"><img src="/Img/returnPage.png" alt=""></a>
+            <a href="/index.html"><img src="/Img/home_96px.png" alt=""></a>
+            <a href="/Ejercicios/Ejercicio 13 Interfaz Voz/index.html"><img src="/Img/nextPage.png" alt=""></a>
+            
+        </div>
+        
+        <div class="img-info">
+            <button type="button" id="id-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+        </div>
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Informacion del Ejercicio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <P>En el siguiente juego tendras que elegir la respuesta correcta</P>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="titulo">
+            <h1>Adivina el objeto</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+
+        <section class="seccion">
+            <h2>¿Como se llama el siguiente objeto?</h2>
+
+            <div class="img-random">
+                <img src="/Img/1.png" alt="Imagen aleatoria" id="ia">
+            </div>
+            
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>Elegir respuesta</h2>
+
+            <div class="frm-datos">
+
+                <select class="form-select" aria-label="Default select example" id="opciones">
+                    <option selected>Escoge tu respuesta</option>
+                    <option value="0">Casa</option>
+                    <option value="1">Carro</option>
+                    <option value="2">Árbol</option>
+                    <option value="3">Pelota</option>
+                    <option value="4">Computadora</option>
+                    <option value="5">Celular</option>
+                    <option value="6">Silla</option>
+                    <option value="7">Mesa</option>
+                    <option value="8">Libro</option>
+                    <option value="9">Cama</option>
+                    <option value="10">Avión</option>
+                    <option value="11">Helicóptero</option>
+                    <option value="12">Helado</option>
+                    <option value="13">Edificio</option>
+                </select>
+
+                <button type="button" class="btn btn-primary" onclick="comprobar()">Comprobar</button>
+
+            </div>
+
+           
+        </section>
+
+        <section class="seccion">
+            <h2>Resultados</h2>
+
+            <div class="resultados">
+                <div class="resultado-item">
+                    <h4>Correctas</h4>
+                    <p id="correctas">0</p>
+                </div>
+                <div class="resultado-item">
+                    <h4>Incorrectas</h4>
+                    <p  id="incorrectas">0</p>
+                </div>
+                <div class="resultado-item">
+                    <h4>Intentos</h4>
+                    <p  id="intentos">5</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h4>©Andrés Gavino Todos los derechos reservados</h4>
+        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-5.92,44.89 C311.23,208.70 365.40,18.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill:rgba(255, 255, 255, 0.74);"></path></svg></div>
+    </footer>
+    
+</body>
+
+<script src="/Ejercicios/Ejercicio 12 Juego Random/Script JS/script.js"></script>
+
+
+</html>

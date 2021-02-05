@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio No. 1</title>
+
+    <link rel="stylesheet" href="/Ejercicios/Ejercicio 1 Poste & Sombra/Estilos/estiloPrincipal.css">
+    <link rel="shortcut icon" href="/Img/icons8_google_code_32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/Estilos/bootstrap.min.css">
+    
+
+    <!--FUENTE-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+    </style>
+
+    
+
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="imgs-regresar">
+            <a href="/index.html" title="Menu"><img src="/Img/home_96px.png" alt=""></a>
+            <a href="/Ejercicios/Ejercicio 2 Altura & Caida/index.html" title="Siguiente"><img src="/Img/nextPage.png" alt=""></a>
+            
+        </div>
+        
+        <div class="img-info">
+            <button type="button" id="id-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Información"></button>
+        </div>
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>Acerca del Ejercicio</strong> </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <P style="text-align: justify;">
+                        Conocida la altura(h) de un poste y el largo de la sombra de este proyectada sobre la
+                        acera(s),a una hora determinada del día, haga un programa que calcule e imprima
+                        (grados, minutos y segundos), el ángulo de incidencia del sol en ese momento.</P>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="titulo">
+            <h1>Ángulo de una sombra</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion">
+            <h2>Ingreso de datos</h2>
+
+            <form action="" name="frm_datos" class="frm-datos">
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_altura" placeholder="10" required>
+                    <label for="floatingInput">Altura</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_largo" placeholder="10" required>
+                    <label for="floatingInput">Largo</label>
+                </div>
+                
+                <div class="frm-btn-calcular">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="getData()">Calcular</button>
+                    <button type="reset" class="btn btn-secondary btn-sm" >Limpiar</button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="seccion">
+            <h2>Ilustración</h2>
+            <div class="frm-img">
+                <img src="/Ejercicios/Ejercicio 1 Poste & Sombra/Img/poste.gif" alt="">
+            </div>
+
+        </section>
+
+        <section class="seccion">
+            <h2>Resultado</h2>
+            
+            <div class="resultado">
+                <div>
+                    <p id="id_resultado"></p>
+                </div>
+            </div>
+            
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h4>©Andrés Gavino Todos los derechos reservados</h4>
+        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-5.92,44.89 C311.23,208.70 365.40,18.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(255, 255, 255, 0.74);"></path></svg></div>
+    </footer>
+
+    <script src="/scripts JS/bootstrap.bundle.min.js"></script>
+    <script src="/Ejercicios/Ejercicio 1 Poste & Sombra/scripts JS/script.js"></script>
+    
+</body>
+</html>

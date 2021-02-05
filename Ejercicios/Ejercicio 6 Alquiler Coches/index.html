@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio No. 6</title>
+
+    <link rel="stylesheet" href="/Ejercicios/Ejercicio 6 Alquiler Coches/Estilos/estiloPrincipal.css">
+    <link rel="shortcut icon" href="/Img/icons8_google_code_32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/Estilos/bootstrap.min.css">
+    <script src="/Ejercicios/Ejercicio 6 Alquiler Coches/Script JS/bootstrap.bundle.min.js"></script>
+
+    <!--FUENTE-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+    </style>
+
+    <script src="/Ejercicios/Ejercicio 6 Alquiler Coches/Script JS/script.js"></script>
+
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="imgs-regresar">
+            <a href="/Ejercicios/Ejercicio 5 Hora Next Second/index.html"><img src="/Img/returnPage.png" alt=""></a>
+            <a href="/index.html"><img src="/Img/home_96px.png" alt=""></a>
+            <a href="/Ejercicios/Ejercicio 7 Edad Persona/index.html"><img src="/Img/nextPage.png" alt=""></a>
+        </div>
+        
+        <div class="img-info">
+            <button type="button" id="id-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Informacion"></button>
+        </div>
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ejercicio 6 Alquiler Coches</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <P style="text-align: justify;">
+                        Una compañía dedicada al alquiler de automóviles cobra un monto fijo de $300000
+                        para los primeros 300 km de recorrido. Para más de 300 km y hasta 1000 km, cobra un
+                        monto adicional de $ 15.000 por cada kilómetro en exceso sobre 300. Para más de
+                        1000 km cobra un monto adicional de $ 10.000 por cada kilómetro en exceso sobre
+                        1000. Los precios ya incluyen el 20% del impuesto general a las ventas, IVA. Diseñe un
+                        programa que determine el monto a pagar por el alquiler de un vehículo y el monto
+                        incluido del impuesto.
+                    </P>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="titulo">
+            <h1>Alquiler de automóviles</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion">
+            <h2>Ingreso de datos</h2>
+            <form action="" class="frm-datos">
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_km" placeholder="10" required maxlength="10" pattern="[0-9]6">
+                    <label for="floatingInput">Kilómetros</label>
+                </div>
+
+                <div class="frm-btn-calcular">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="getData()">Calcular</button>
+                    <button type="reset" class="btn btn-secondary btn-sm" >Limpiar</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="seccion">
+            <h2>Resultado</h2>
+
+            <div class="frm-resultado">
+                <div>
+                    <p><strong>Kilómetros: </strong></p>
+                    <p id="id_kilometros">0 km</p>
+                </div>
+
+                <div>
+                    <p><strong>Monto IVA.: </strong></p>
+                    <p id="id_montoIva">$0</p>
+                </div>
+
+                <div>
+                    <p><strong>Monto Total: </strong></p>
+                    <p id="id_montoTotal">$0</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h4>©Andrés Gavino Todos los derechos reservados</h4>
+        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-5.92,44.89 C311.23,208.70 365.40,18.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill:rgba(255, 255, 255, 0.74);"></path></svg></div>
+    </footer>
+    
+</body>
+</html>

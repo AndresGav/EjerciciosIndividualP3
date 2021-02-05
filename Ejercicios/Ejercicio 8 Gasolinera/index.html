@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio No.8
+    </title>
+
+    <link rel="stylesheet" href="/Ejercicios/Ejercicio 8 Gasolinera/Estilos/estiloPrincipal.css">
+    <link rel="shortcut icon" href="/Img/icons8_google_code_32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/Estilos/bootstrap.min.css">
+    <script src="/Ejercicios/Ejercicio 8 Gasolinera/Script JS/bootstrap.bundle.min.js"></script>
+
+    <!--FUENTE-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+    </style>
+
+    <script src="/Ejercicios/Ejercicio 8 Gasolinera/Script JS/script.js"></script>
+
+</head>
+<body onload="loadData()">
+
+    <div class="nav-bar">
+        <div class="imgs-regresar">
+            <a href="/Ejercicios/Ejercicio 7 Edad Persona/index.html"><img src="/Img/returnPage.png" alt=""></a>
+            <a href="/index.html"><img src="/Img/home_96px.png" alt=""></a>
+            <a href="/Ejercicios/Ejercicio 9 Dec to Binario/index.html"><img src="/Img/nextPage.png" alt=""></a>
+            
+        </div>
+        
+        <div class="img-info">
+            <button type="button" id="id-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+        </div>
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Información del Ejercicio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <P style="text-align: justify;">
+                        En una gasolinera se instala un detector para controlar la cantidad de litros de
+                        gasolina que va despachando el pistero. Se conoce que al comenzar el turo de
+                        trabajo en el tanque de gasolina hay N litros. Confeccione un programa para
+                        conocer constantemente. <br>
+                        ✓ La cantidad de vehículos atendidos.<br>
+                        ✓ La cantidad de dinero recaudado si cada litro de gasolina especial cuesta $1,25
+                        ctvos. de dólar.<br>
+                        ✓ Cuál es la mayor cantidad de gasolina despachada a un vehículo</P>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="titulo">
+            <h1>Gestión de gasolinera</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion">
+            <h2>Ingreso de combustible</h2>
+            <form action="" class="frm-datos">
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_litros" placeholder="10" required min="1" maxlength="6">
+                    <label for="floatingInput">Combustible</label>
+                </div>
+
+            
+                <div class="frm-btn-calcular">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="agregar()" id="btn-litros">Agregar</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="seccion">
+            <h2>Despacho</h2>
+
+            <form action="" class="frm-datos">
+
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="id_litrosConsumir" placeholder="10" required>
+                    <label for="floatingInput">Litros a despachar</label>
+                </div>
+
+                <div class="frm-btn-calcular">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="despachar()" id="btn_despachar">Despachar</button>
+                    
+                </div>
+                
+            </form>
+
+            <div class="detalles-item">
+                <strong>Litros restantes:</strong>
+                <p id="id_litrosRes">NAN</p>
+            </div>
+
+        </section>
+
+        <section class="seccion">
+            <h2>Detalles</h2>
+
+            <div class="detalles">
+                <div class="detalles-item">
+                    <strong>Vehiculos atendidos:</strong>
+                    <p id="id_Vehiculos">0</p>
+                </div>
+
+                <div class="detalles-item">
+                    <strong>Recaudación:</strong>
+                    <p id="id_recaudacion">0</p>
+                </div>
+                
+                <div class="detalles-item">
+                    <strong>Mayor consumidor:</strong>
+                    <p id="id_mayorConsu">0</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h4>©Andrés Gavino Todos los derechos reservados</h4>
+        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-5.92,44.89 C311.23,208.70 365.40,18.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(255, 255, 255, 0.74);"></path></svg></div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio No. 3</title>
+
+    <link rel="stylesheet" href="/Ejercicios/Ejercicio 3 Formar Numero/Estilos/estiloPrincipal.css">
+    <link rel="shortcut icon" href="/Img/icons8_google_code_32.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/Estilos/bootstrap.min.css">
+    <script src="/Scripts JS/bootstrap.bundle.min.js"></script>
+
+    <!--FUENTE-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+    </style>
+
+    <script src="/Ejercicios/Ejercicio 3 Formar Numero/Scripts JS/script.js"></script>
+
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="imgs-regresar">
+            <a href="/Ejercicios/Ejercicio 2 Altura & Caida/index.html"><img src="/Img/returnPage.png" alt=""></a>
+            <a href="/index.html"><img src="/Img/home_96px.png" alt=""></a>
+            <a href="/Ejercicios/Ejercicio 4 Compra/index.html"><img src="/Img/nextPage.png" alt=""></a>
+            
+        </div>
+        
+        <div class="img-info">
+            <button type="button" id="id-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+        </div>
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Información del Ejercicio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <P style="text-align: justify;">
+                        Dados 5 números de 5 cifras encontrar el 6 número de 5 cifras también de la forma
+                        siguiente: <br>
+                        94567 <br>
+                        28954 <br>
+                        36532 <br>
+                        45668 <br>
+                        65788 <br>
+                        Número de 5 cifras: 98568
+
+                    </P>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="titulo">
+            <h1>Sexto Número</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion">
+            <h2>Ingreso de números</h2>
+
+            <form action="" class="frm-datos">
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_valor1" placeholder="10" required maxlength="5" minlength="5">
+                    <label for="floatingInput">Valor 1</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_valor2" placeholder="10" required maxlength="5" minlength="5">
+                    <label for="floatingInput">Valor 2</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_valor3" placeholder="10" required maxlength="5" minlength="5">
+                    <label for="floatingInput">Valor 3</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_valor4" placeholder="10" required maxlength="5" minlength="5">
+                    <label for="floatingInput">Valor 4</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id_valor5" placeholder="10" required maxlength="5" minlength="5">
+                    <label for="floatingInput">Valor 5</label>
+                </div>
+
+                <div class="frm-btn-calcular">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="getData()">Calcular</button>
+                    <button type="reset" class="btn btn-secondary btn-sm" >Limpiar</button>
+                </div>
+
+
+            </form>
+
+        </section>
+
+        <section class="seccion">
+            <h2>Ejemplo</h2>
+
+            <div class="frm-img">
+                <img src="/Ejercicios/Ejercicio 3 Formar Numero/Img/ilustracion.png" alt="">
+            </div>
+
+        </section>
+
+        <section class="seccion">
+            <h2>Resultado</h2>
+
+            <div class="resultado">
+                <p id="id_resultado"></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h4>©Andrés Gavino Todos los derechos reservados</h4>
+        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-5.92,44.89 C311.23,208.70 365.40,18.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(255, 255, 255, 0.74);"></path></svg></div>
+    </footer>
+    
+</body>
+</html>
