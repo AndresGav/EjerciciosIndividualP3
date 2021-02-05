@@ -8,16 +8,7 @@ var content = '';
 
 recognition.continuous = true;
 
-//
-recognition.onresult = function (event){
-    var current = event.resultIndex;
 
-    var transcript = event.results[current][0].transcript;
-
-    content+= transcript;
-
-    textbox.val(content);
-}
 
 $("#start-btn").click(function(event){
 
@@ -26,5 +17,23 @@ $("#start-btn").click(function(event){
     }
 
     recognition.start()
+   
+    recognition.onresult = function (event){
+       
+        var current = event.resultIndex;
+       
+        var transcript = event.results[current][0].transcript;
+    
+        content+= transcript;
+    
+        textbox.val(content);
+    
+    }
 
+    
+
+});
+
+$("#stop-btn").click(function(event){
+    recognition.stop();
 });
