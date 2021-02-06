@@ -19,7 +19,7 @@
 </head>
 
 
-<body>
+<body onload="loadData()">
 
     <div class="nav-bar">
         <div class="imgs-regresar">
@@ -59,26 +59,31 @@
 
     <main class="principal">
         <section class="seccion">
-            <h2>Titulo seccion</h2>
+            <h2>Controles</h2>
 
-            <div class="form-group">
-                <textarea name="" id="textbox" cols="30" rows="10"></textarea>
-            </div>
-
-            <div>
-                <button id="start-btn" class="btn btn-danger btn-block">
+            <div class="frm-datos">
+                <button id="start-btn" class="btn btn-primary btn-block">
                     Escuchar
                 </button>
-
-                <button id="stop-btn" class="btn btn-danger btn-block">
+                <div class="spinner-grow text-light" role="status" id="cargando">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <button id="stop-btn" class="btn btn-secondary btn-block">
                     Parar
+                </button>
+                <button id="stop-btn" class="btn btn-secondary btn-block" onclick="limpiar()">
+                    Limpiar
                 </button>
             </div>
                       
         </section>
 
         <section class="seccion">
-            <h2>Titulo seccion</h2>
+            <h2>Texto Captado</h2>
+
+            <div class="form-group">
+                <textarea name="" id="textbox" cols="30" rows="10"></textarea>
+            </div>
 
         </section>
 

@@ -30,10 +30,26 @@ $("#start-btn").click(function(event){
     
     }
 
-    
+    document.getElementById("stop-btn").disabled =false
+    document.getElementById("start-btn").disabled =true;
+    document.getElementById("cargando").style.visibility = 'visible';
+    document.getElementById("start-btn").textContent = "Escuchando...";
 
 });
 
 $("#stop-btn").click(function(event){
+    document.getElementById("start-btn").disabled =false;
+    document.getElementById("cargando").style.visibility = 'hidden';
+    document.getElementById("start-btn").textContent = "Escuchar";
     recognition.stop();
 });
+
+function loadData(){
+    document.getElementById("stop-btn").disabled =true;
+    document.getElementById("textbox").disabled =true;
+    document.getElementById("cargando").style.visibility = 'hidden';
+}
+
+function limpiar(){
+    location.reload();
+}
