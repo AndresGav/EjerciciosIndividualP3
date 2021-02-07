@@ -38,7 +38,7 @@ function comprobar(){
     
     if(valor == index){
 
-        if(correctas==10){
+        if(correctas==9){
             alert("Felicidaes Ganaste");
 
             location.reload();
