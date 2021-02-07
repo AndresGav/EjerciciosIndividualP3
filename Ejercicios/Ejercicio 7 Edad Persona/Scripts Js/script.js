@@ -31,6 +31,6 @@ function calcEdad(anio,mes,dia){
     }
 
     anioA -= anio;
-    return (anioA+ " años, "+ mesA+ " meses, "+diaA+" dias");
+    return (anioA+ " años, "+ mesA+ " meses, "+diaA+" días");
     
 }

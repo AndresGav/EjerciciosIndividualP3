@@ -13,15 +13,18 @@ function agregar(){
 }
 
 function despachar(){
+
     var litrosConsumir = parseInt(document.getElementById("id_litrosConsumir").value);
     var litrosRes = parseInt(document.getElementById("id_litrosRes").textContent);
     var nCarros = parseInt(document.getElementById("id_Vehiculos").textContent);
     var recaudacion = parseFloat(document.getElementById("id_recaudacion").textContent);
     var mayorConsu = parseInt(document.getElementById("id_mayorConsu").textContent);
 
+    
+
     if(litrosConsumir > litrosRes){
         alert("Lo sentimos, por el momento se le puede agregar " + litrosRes + " litros");
-        document.getElementById("btn_despachar").disabled = true;
+        
     }else{
         litrosRes-= litrosConsumir;
         document.getElementById("id_litrosRes").textContent = litrosRes;
@@ -37,6 +40,10 @@ function despachar(){
             document.getElementById("id_mayorConsu").textContent = litrosConsumir + " litros, Vehiculo No. "+ vehi ;
         }
 
+    }
+
+    if(litrosRes==0){
+        document.getElementById("btn_despachar").disabled = true;
     }
 
 }
