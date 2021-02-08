@@ -44,3 +44,14 @@ function getCifras(n1,n2,n3,n4,n5){
 
     return resultado;
 }
+
+function verificarDatos(){
+    if(a){
+        alert("Ingrese datos mayores que 0");
+        location.reload();
+        return false;
+    }
+
+
+    return true;
+}

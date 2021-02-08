@@ -2,7 +2,10 @@ function getData(){
 
     var cantidad = parseInt(document.getElementById("id_cantidad").value);
 
-    calcDetalles(cantidad);
+    if(verificarDatos(cantidad)){
+        calcDetalles(cantidad);
+    }
+    
 
 }
 
@@ -45,4 +48,15 @@ function calcDetalles(cant){
     document.getElementById("id_descuento").textContent = descuento.toFixed(2);
     document.getElementById("id_total").textContent = total.toFixed(2);
     
+}
+
+function verificarDatos(cant){
+    if(cant<=0){
+        alert("Ingrese datos mayores que 0");
+        location.reload();
+        return false;
+    }
+
+
+    return true;
 }

@@ -1,8 +1,12 @@
 function getData(){
     var decimal = parseInt(document.getElementById("id_decimal").value);
-    binario(decimal);
 
-    document.getElementById("btn_transformar").disabled = true;
+    if(verificarDatos(decimal)){
+        binario(decimal);
+
+        document.getElementById("btn_transformar").disabled = true;
+    }
+    
 }
 
 
@@ -34,4 +38,15 @@ function cleanData(){
     for (var i=list.length-1 ; i >= 0 ; i--){
         b.removeChild(list.item(i));    
     }
+}
+
+function verificarDatos(dec){
+    if(dec<=0){
+        alert("Ingrese datos mayores que 0");
+        location.reload();
+        return false;
+    }
+
+
+    return true;
 }

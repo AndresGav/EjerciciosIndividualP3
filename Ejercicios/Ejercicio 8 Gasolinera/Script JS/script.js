@@ -3,13 +3,17 @@ function agregar(){
 
     var litros = parseInt(document.getElementById("id_litros").value);
 
-    alert("Se agregaron " +litros+ " litros de combustible");
+    if(verificarDatos(litros)){
+        alert("Se agregaron " +litros+ " litros de combustible");
 
-    document.getElementById("id_litrosRes").textContent = litros;
+        document.getElementById("id_litrosRes").textContent = litros;
+    
+        document.getElementById("btn-litros").disabled = true;
+    
+        document.getElementById("btn_despachar").disabled = false;
+    }
 
-    document.getElementById("btn-litros").disabled = true;
-
-    document.getElementById("btn_despachar").disabled = false;
+    
 }
 
 function despachar(){
@@ -50,4 +54,15 @@ function despachar(){
 
 function loadData(){
     document.getElementById("btn_despachar").disabled = true;
+}
+
+function verificarDatos(li){
+    if(li<=0){
+        alert("Ingrese datos mayores que 0");
+        location.reload();
+        return false;
+    }
+
+
+    return true;
 }

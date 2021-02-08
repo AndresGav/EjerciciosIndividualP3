@@ -1,7 +1,10 @@
 function getData(){
     var segundos = document.getElementById("id_segundos").value;
-
-    altura(segundos);
+    
+    if(verificarDatos(segundos)){
+        altura(segundos);
+    }
+    
 }
 
 function altura(seg){
@@ -11,4 +14,16 @@ function altura(seg){
 
     document.getElementById("id_respuesta").textContent = altura + " m";
     
+}
+
+
+function verificarDatos(seg){
+    if(seg<=0){
+        alert("Ingrese datos mayores que 0");
+        location.reload();
+        return false;
+    }
+
+
+    return true;
 }

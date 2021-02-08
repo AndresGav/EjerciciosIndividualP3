@@ -3,8 +3,10 @@ function getData(){
      var altura = parseFloat( document.getElementById("id_altura").value);
      var largo = parseFloat( document.getElementById("id_largo").value);
 
-
-     grados (altura,largo);
+    if (verificarDatos(altura,largo)){
+        grados (altura,largo);
+    }
+     
 
 }
 
@@ -34,4 +36,15 @@ function grados(alt, lar){
 
     document.getElementById("id_resultado").textContent = grInt+ "⁰ " + minInt+ "' "+ segundosInt +"''";
     
+}
+
+function verificarDatos(alt,lar){
+    if(alt<=0 || lar<=0){
+        alert("Ingrese datos mayores que 0");
+        location.reload();
+        return false;
+    }
+
+
+    return true;
 }

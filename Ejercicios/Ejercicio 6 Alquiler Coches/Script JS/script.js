@@ -1,7 +1,10 @@
 function getData(){
     var km = parseInt( document.getElementById("id_km").value);
+
+    if(verificarDatos(km)){
+        calcularMonto(km);
+    }
     
-    calcularMonto(km);
 }
 
 function calcularMonto(km){
@@ -20,4 +23,15 @@ function calcularMonto(km){
     document.getElementById("id_kilometros").textContent = km+ " km";
     document.getElementById("id_montoIva").textContent = "$"+monto;
     document.getElementById("id_montoTotal").textContent ="$"+ monto;
+}
+
+function verificarDatos(km){
+    if(km<=0){
+        alert("Ingrese datos mayores que 0");
+        location.reload();
+        return false;
+    }
+
+
+    return true;
 }
