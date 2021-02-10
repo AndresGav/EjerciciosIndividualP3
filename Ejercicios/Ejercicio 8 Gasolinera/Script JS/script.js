@@ -26,7 +26,7 @@ function despachar(){
 
     
 
-    if(litrosConsumir > litrosRes){
+    if(litrosConsumir > litrosRes || litrosConsumir<=0){
         alert("Lo sentimos, por el momento se le puede agregar " + litrosRes + " litros");
         
     }else{
@@ -59,6 +59,12 @@ function loadData(){
 function verificarDatos(li){
     if(li<=0){
         alert("Ingrese datos mayores que 0");
+        location.reload();
+        return false;
+    }
+
+    if(li>99999){
+        alert("Podemos agregar hasta 99999 litros");
         location.reload();
         return false;
     }

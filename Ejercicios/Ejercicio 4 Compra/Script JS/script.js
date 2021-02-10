@@ -57,6 +57,12 @@ function verificarDatos(cant){
         return false;
     }
 
+    if(cant>99999){
+        alert("Podemos agregar máximo 99999");
+        location.reload();
+        return false;
+    }
+
 
     return true;
 }

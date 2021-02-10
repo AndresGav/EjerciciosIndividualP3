@@ -2,7 +2,12 @@ function getData(){
     var inicio = parseInt(document.getElementById("id_inicio").value);
     var final = parseInt(document.getElementById("id_final").value);
 
-    narcisistas(inicio,final);
+    if(verificarDatos(inicio,final)){
+        narcisistas(inicio,final);
+    }else{
+        location.reload();
+    }
+    
 }
 
 function narcisistas(numIni, numFin){
@@ -44,4 +49,22 @@ function cleanData(){
     for (var i=list.length-1 ; i >= 0 ; i--){
         b.removeChild(list.item(i));    
     }
+}
+
+function verificarDatos(ini,fin){
+    if(ini > fin ){
+        alert("EL valor inicial debe ser menor al valor final");
+        return false;
+    }
+    if(ini > 9999 || fin >9999){
+        alert("Cuidado no ingreses mayores a 9999");
+        return false;
+    }
+
+    if(ini <0 || fin <0){
+        alert("Ingresa valores positivos");
+        return false;
+    }
+
+    return true;
 }

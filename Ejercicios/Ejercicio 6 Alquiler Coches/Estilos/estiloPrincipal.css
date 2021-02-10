@@ -120,7 +120,10 @@ header{
 }
 
 .frm-resultado{
-    padding-top: 10px;
+    padding-top: 10%;
+    width: 66%;
+    position: relative;
+    margin: auto;
 }
 
 .frm-resultado strong{
@@ -128,6 +131,11 @@ header{
 }
 .frm-resultado p{
     font-size: 18px;
+}
+
+.frm-resultado-item{
+    display: flex;
+    justify-content: space-between;
 }
 
 /*FOOTER*/

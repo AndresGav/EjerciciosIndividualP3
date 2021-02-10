@@ -5,6 +5,8 @@ function getData(){
 
     if (verificarDatos(altura,largo)){
         grados (altura,largo);
+    }else{
+        location.reload();
     }
      
 
@@ -41,10 +43,12 @@ function grados(alt, lar){
 function verificarDatos(alt,lar){
     if(alt<=0 || lar<=0){
         alert("Ingrese datos mayores que 0");
-        location.reload();
         return false;
     }
-
+    if(alt > 9999 || lar>9999){
+        alert("Cuidado no ingreses valores mayores a 9999");
+        return false;
+    }
 
     return true;
 }

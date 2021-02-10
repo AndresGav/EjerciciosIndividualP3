@@ -46,6 +46,12 @@ function verificarDatos(dec){
         location.reload();
         return false;
     }
+    if(dec>9999999){
+        alert("Decimal máximo 9999999");
+        location.reload();
+        return false;
+    }
+
 
 
     return true;

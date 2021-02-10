@@ -24,6 +24,11 @@ function verificarDatos(seg){
         return false;
     }
 
+    if(seg>9999){
+        alert("Cuidado ! no ingreses valores mayores a 9999 ");
+        location.reload();
+        return false;
+    }
 
     return true;
 }
